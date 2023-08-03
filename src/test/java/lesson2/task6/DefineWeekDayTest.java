@@ -1,9 +1,8 @@
-package org.example;
+package lesson2.task6;
 
+import lesson2.task6.DefineWeekDay;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class DefineWeekDayTest {
 

@@ -1,4 +1,4 @@
-package org.example;
+package lesson2.task6;
 
 public class DefineWeekDay {
     public static String defineTheDay(int dayNumber){
