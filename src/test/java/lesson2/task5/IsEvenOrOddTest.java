@@ -6,15 +6,22 @@ import org.junit.jupiter.api.Test;
 class IsEvenOrOddTest {
 
     @Test
-    void verifyIfNumberIsEvenOrOdd() {
+    void shouldVerifyIfNumberIsEven() {
         //given
         int numberA = 2;
-        int numberB = 3;
         //when
         boolean result1 = IsEvenOrOdd.isEven(numberA);
-        boolean result2 = IsEvenOrOdd.isEven(numberB);
         //then
         Assertions.assertTrue(result1);
-        Assertions.assertFalse(result2);
+    }
+
+    @Test
+    void shouldVerifyIfNumberIsNotEven() {
+        //given
+        int numberA = 3;
+        //when
+        boolean result1 = IsEvenOrOdd.isEven(numberA);
+        //then
+        Assertions.assertFalse(result1);
     }
 }
