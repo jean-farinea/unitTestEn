@@ -1,8 +1,8 @@
 package lesson3.task1;
 
 public class Seat {
-    private int seatNumber;
-    private int rowNumber;
+    private final int seatNumber;
+    private final int rowNumber;
     private boolean available;
 
     public Seat(int seatNumber, int rowNumber, boolean available) {
@@ -11,21 +11,15 @@ public class Seat {
         this.available = available;
     }
 
-    public static String reserveSeat(Seat seatToReserve) {
-        if (seatToReserve.available == true) {
-            seatToReserve.available = false;
-            return "You have reserved this seat successfully!";
-        } else {
-            return "Sorry, this seat is not available, try another one please.";
+    public void reserveSeat() {
+        if (available) {
+            available = false;
         }
     }
 
-    public static String releaseSeat(Seat seatToRelease) {
-        if (seatToRelease.available == false) {
-            seatToRelease.available = true;
-            return "You have released this seat successfully!";
-        } else {
-            return "Sorry, this seat is already available, try another one please.";
+    public void releaseSeat() {
+        if (!available) {
+            available = true;
         }
     }
 
