@@ -12,9 +12,9 @@ class SeatTest {
         //given
         Seat notReservedSeat = new Seat(2, 3, true);
         //when
-        boolean isNotReserved = notReservedSeat.isAvailable();
+        notReservedSeat.reserveSeat();
         //then
-        Assertions.assertTrue(isNotReserved);
+        Assertions.assertFalse(notReservedSeat.isAvailable());
     }
 
     @Test
@@ -22,9 +22,9 @@ class SeatTest {
         //given
         Seat reservedSeat = new Seat(1, 2, false);
         //when
-        boolean isReserved = reservedSeat.isAvailable();
+        reservedSeat.releaseSeat();
         //then
-        Assertions.assertFalse(isReserved);
+        Assertions.assertTrue(reservedSeat.isAvailable());
     }
 
 }
