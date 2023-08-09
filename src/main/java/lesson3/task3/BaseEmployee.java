@@ -1,25 +1,26 @@
 package lesson3.task3;
 
-public class BaseEmployee {
-    private String name;
-    private float baseSalary = 3000;
+public abstract class BaseEmployee {
+    protected String name;
+    final int baseSalary = 3000;
     final int employmentYear;
 
-    public void calculateMonthlySalary() {
+    public abstract int calculateMonthlySalary();
 
+    public BaseEmployee(String name, int employmentYear) {
+        this.name = name;
+        this.employmentYear = employmentYear;
     }
 
-    public BaseEmployee(String name, float baseSalary, int employmentYear) {
-        this.name = name;
-        this.baseSalary = baseSalary;
-        this.employmentYear = employmentYear;
+    public int getYearsWorked() {
+        return 2023 - employmentYear;
     }
 
     public String getName() {
         return name;
     }
 
-    public float getBaseSalary() {
+    public int getBaseSalary() {
         return baseSalary;
     }
 
