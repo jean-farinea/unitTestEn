@@ -1,4 +1,4 @@
-package lesson7.task1.task9;
+package lesson6.task9;
 
 public class DivisibilityByThree {
 
