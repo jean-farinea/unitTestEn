@@ -2,7 +2,7 @@ package lesson7.task5;
 
 import java.time.Month;
 
-public class GetSeason{
+public class SeasonChecker {
 
     public static Season getSeason(Month month) {
         switch (month) {
