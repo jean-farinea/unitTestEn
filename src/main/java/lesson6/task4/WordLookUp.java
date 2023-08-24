@@ -8,7 +8,7 @@ public class WordLookUp {
 
     public static boolean containsWord(String wordToLookUp) throws IOException {
         String content = FileUtils.readFromFile("src/main/resources/data.txt");
-        if (content.contains(wordToLookUp)){
+        if (content.contains(wordToLookUp)) {
             return true;
         } else {
             return false;
