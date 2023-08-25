@@ -6,8 +6,8 @@ import java.io.IOException;
 
 public class WordLookUp {
 
-    public static boolean containsWord(String wordToLookUp) throws IOException {
-        String content = FileUtils.readFromFile("src/main/resources/data.txt");
+    public static boolean containsWord(String wordToLookUp, String filePath) throws IOException {
+        String content = FileUtils.readFromFile(filePath);
         if (content.contains(wordToLookUp)) {
             return true;
         } else {
