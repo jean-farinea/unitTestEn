@@ -6,14 +6,10 @@ import java.io.IOException;
 
 public class ConvertToUppercase {
 
-    public static void convertToUpperCase() throws IOException {
-        String filePath = "src/main/resources/data.txt";
+    public static void convertToUpperCase(String filePath, String newFilePath) throws IOException {
         String content = FileUtils.readFromFile(filePath);
         String newContentFormatted = content.toUpperCase();
-        FileUtils.writeToFile("src/main/resources/output.txt", newContentFormatted);
+        FileUtils.writeToFile(newFilePath, newContentFormatted);
     }
 
-    public static void main(String[] args) throws IOException {
-        convertToUpperCase();
-    }
 }
