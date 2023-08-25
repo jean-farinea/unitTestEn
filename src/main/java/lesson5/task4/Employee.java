@@ -36,7 +36,7 @@ public class Employee {
         this.surname = surname;
     }
 
-    public String getemployee_Info() {
+    public String getEmployeeFullName() {
         return "Employee name : " + name + whiteSpace + surname;
     }
 
@@ -45,15 +45,15 @@ public class Employee {
     }
 
     // Method is used to get total  salary
-    public BigDecimal getSalary_1() {
+    public BigDecimal getEmployeeFullSalary() {
         return baseSalary.add(bonus);
     }
 
-    public BigDecimal getSalary_2() {
+    public BigDecimal getEmployeeBaseSalary() {
         return baseSalary;
     }
 
-    public BigDecimal get_B() {
+    public BigDecimal getEmployeeBonus() {
         return bonus;
     }
 

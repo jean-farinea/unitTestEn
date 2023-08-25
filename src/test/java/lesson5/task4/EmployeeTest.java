@@ -1,7 +1,5 @@
 package lesson5.task4;
 
-import static org.junit.jupiter.api.Assertions.*;
-
 import java.math.BigDecimal;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
@@ -13,7 +11,7 @@ class EmployeeTest {
         //given
         Employee employee = new Employee("John", "Smith");
         //when
-        String actualEmployeeInfo = employee.getemployee_Info();
+        String actualEmployeeInfo = employee.getEmployeeFullName();
         //then
         Assertions.assertNotNull(actualEmployeeInfo);
         Assertions.assertEquals("Employee name : John Smith", actualEmployeeInfo);
@@ -37,7 +35,7 @@ class EmployeeTest {
         BigDecimal baseSalary = new BigDecimal("3000");
         Employee employee = new Employee("John", "Smith", 45, baseSalary);
         //when
-        BigDecimal actualBaseSalary = employee.getSalary_2();
+        BigDecimal actualBaseSalary = employee.getEmployeeBaseSalary();
         //then
         Assertions.assertNotNull(actualBaseSalary);
         Assertions.assertEquals(baseSalary, actualBaseSalary);
@@ -51,7 +49,7 @@ class EmployeeTest {
         BigDecimal bonus = new BigDecimal("500");
         Employee employee = new Employee("John", 45, baseSalary, bonus, "Smith");
         //when
-        BigDecimal actualTotalSalary = employee.getSalary_1();
+        BigDecimal actualTotalSalary = employee.getEmployeeFullSalary();
         //then
         Assertions.assertNotNull(actualTotalSalary);
         Assertions.assertEquals(baseSalary.add(bonus), actualTotalSalary);
@@ -64,7 +62,7 @@ class EmployeeTest {
         BigDecimal bonus = new BigDecimal("500");
         Employee employee = new Employee("John", 45, baseSalary, bonus, "Smith");
         //when
-        BigDecimal actualBonus = employee.get_B();
+        BigDecimal actualBonus = employee.getEmployeeBonus();
         //then
         Assertions.assertNotNull(actualBonus);
         Assertions.assertEquals(bonus, actualBonus);
