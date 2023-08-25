@@ -6,11 +6,10 @@ import java.io.IOException;
 
 public class CharCounter {
 
-    public static int countChars() throws IOException {
-        String filePath = "src/main/resources/data.txt";
+    public static int countChars(String filePath) throws IOException {
         String content = FileUtils.readFromFile(filePath);
         int totalOfChars = content.length();
-        System.out.println(totalOfChars);
         return totalOfChars;
     }
+
 }
