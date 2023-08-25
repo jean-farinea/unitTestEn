@@ -6,8 +6,7 @@ import java.io.IOException;
 
 public class PrintEverySecondLine {
 
-    public static void printEverySecondLine() throws IOException {
-        String filePath = "src/main/resources/data.txt";
+    public static void printEverySecondLine(String filePath) throws IOException {
         String content = FileUtils.readFromFile(filePath);
         String[] lines = content.split(System.lineSeparator());
         for (int i = 1; i < lines.length; i += 2) {
