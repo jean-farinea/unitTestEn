@@ -1,6 +1,6 @@
 package lesson6.task8;
 
-public class idValidator {
+public class IdValidator {
 
     public static void validatePersonalId(String id) throws WrongTypeOfDataException, IllegalLengthException {
         if (!(id instanceof String)) {
