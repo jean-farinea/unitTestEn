@@ -6,14 +6,18 @@ import org.junit.jupiter.params.provider.MethodSource;
 
 import java.util.stream.Stream;
 
-class TextLengthTest {
+class TextUtilsTest {
 
     @ParameterizedTest
     @MethodSource("provideSampleTexts")
     void shouldCheckCalculateTextLength(String text) {
+        //given
         int expectedLength = text.length();
-        int calculatedLength = TextLength.calculateTextLength(text);
+        //when
+        int calculatedLength = TextUtils.calculateTextLength(text);
+        //then
         Assertions.assertEquals(expectedLength, calculatedLength);
+        Assertions.assertThrows(NullPointerException.class, () -> TextUtils.calculateTextLength(null));
     }
 
     private static Stream<String> provideSampleTexts() {
