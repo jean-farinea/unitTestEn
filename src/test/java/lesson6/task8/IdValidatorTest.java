@@ -10,10 +10,24 @@ class IdValidatorTest {
     void shouldValidatePersonalId() {
         //given
         String id = "12345678910";
-        //when
-        assertThrows(IllegalArgumentException.class, () -> IdValidator.validatePersonalId("123456789"));
-        assertThrows(IllegalArgumentException.class, () -> IdValidator.validatePersonalId("123456789a"));
+        //then
         assertDoesNotThrow(() -> IdValidator.validatePersonalId(id));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenIdIsInvalid() {
+        //given
+        String invalidId = "123456789";
+        //then
+        assertThrows(IllegalLengthException.class, () -> IdValidator.validatePersonalId(invalidId));
+    }
+
+    @Test
+    void shouldThrowExceptionWhenIdIsNull() {
+        //given
+        String nullId = null;
+        //then
+        assertThrows(WrongTypeOfDataException.class, () -> IdValidator.validatePersonalId(nullId));
     }
 
 }
