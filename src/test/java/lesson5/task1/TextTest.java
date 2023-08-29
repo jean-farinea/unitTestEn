@@ -12,9 +12,17 @@ class TextTest {
         Text text = new Text();
         //when
         boolean trueExpected = text.isPalindrome("abba");
-        boolean falseExpected = text.isPalindrome("abcd");
         //then
         assertTrue(trueExpected);
+    }
+
+    @Test
+    void shouldCheckIfIsNotPalindrome() {
+        //given
+        Text text = new Text();
+        //when
+        boolean falseExpected = text.isPalindrome("abcd");
+        //then
         assertFalse(falseExpected);
     }
 }
