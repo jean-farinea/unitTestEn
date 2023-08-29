@@ -1,8 +1,10 @@
 package lesson7.task4;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.NullAndEmptySource;
 
 import java.util.stream.Stream;
 
@@ -17,7 +19,15 @@ class TextUtilsTest {
         int calculatedLength = TextUtils.calculateTextLength(text);
         //then
         Assertions.assertEquals(expectedLength, calculatedLength);
-        Assertions.assertThrows(NullPointerException.class, () -> TextUtils.calculateTextLength(null));
+    }
+
+    @Test
+    @NullAndEmptySource
+    void shouldThrowExceptionWhenTextIsNull() {
+        //given
+        String nullText = null;
+        //then
+        Assertions.assertThrows(NullPointerException.class, () -> TextUtils.calculateTextLength(nullText));
     }
 
     private static Stream<String> provideSampleTexts() {
