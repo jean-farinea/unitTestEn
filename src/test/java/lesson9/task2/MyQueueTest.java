@@ -9,7 +9,7 @@ class MyQueueTest {
     @Test
     void shouldAddElement() {
         //given
-        MyQueue queue = new MyQueue(1);
+        MyQueue queue = new MyQueue(2);
         //when
         queue.add(1);
         //then
